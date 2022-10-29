@@ -4,7 +4,7 @@
     include 'backend/functions.php';
 
     session_start();
-
+array
 ?>
 
 <!DOCTYPE html>

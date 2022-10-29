@@ -34,9 +34,9 @@
                 echo "</form>";
                 echo "</td>";
                 echo "<td>";
-                echo "<form action='backend/call.php' method='post'>";
-                echo "<input type='hidden' name='to' value='" . $row['Name'] . "' />";
-                echo "<button type='submit' name='phone' value='" . $row['phone'] . "'>Call</button>";
+                echo "<form action='call.php' method='post'>";
+                echo "<input type='hidden' name='to' value='" . $row['phone'] . "' />";
+                echo "<button type='submit' name='call' value='" . $row['Name'] . "'>Call</button>";
                 echo "</form>";
                 echo "</td>";
                 echo "<td>";
