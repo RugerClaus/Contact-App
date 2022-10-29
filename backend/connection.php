@@ -13,7 +13,7 @@
 
     $logindb = 'loginsystem';
 
-    $login = new mysqli($server,$username,$password,$logindb);
+    $login = new mysqli($server,$username,$password,$logindb) or die($login->error);
 
 
 ?>
