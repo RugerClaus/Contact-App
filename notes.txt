@@ -1,0 +1,9 @@
+this is a contact app
+
+needs a login first and foremost
+
+login form should be able to authenticate user using the password
+
+user_data:
+    userId
+
