@@ -11,9 +11,4 @@
         die("Connection failed!: " . $conn->connect_error);
     }
 
-    $logindb = 'loginsystem';
-
-    $login = new mysqli($server,$username,$password,$logindb) or die($login->error);
-
-
 ?>

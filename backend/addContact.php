@@ -7,7 +7,7 @@
         $email = $_POST['email'];
         $phone = $_POST['phone'];
 
-        $conn->query("INSERT INTO contact (name,email,phone) values('$name','$email','$phone')", 1);
+        $conn->query("INSERT INTO contact (Name,email,phone) values('$name','$email','$phone')", 1);
         header('location:../index.php');
     }
 ?>

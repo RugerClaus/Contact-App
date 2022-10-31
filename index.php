@@ -4,7 +4,7 @@
     include 'backend/functions.php';
 
     session_start();
-array
+
 ?>
 
 <!DOCTYPE html>
@@ -18,13 +18,15 @@ array
     <script src="frontend/js/index.js" type="module" defer></script>
 </head>
 <body>
-    <h1>Add Contact</h1>
-    <a href="contacts.php">Contacts</a>
+    <header>
+        <h1>Add Contact</h1>
+        <a class="contactsLink" href="contacts.php">Contacts</a>
+    </header>
     <form action="backend/addContact.php" class="addContact" method="post">
         <input type="text" name="name" placeholder="Name Of Contact" />
         <input type="text" name="email" placeholder="email address" />
         <input type="text" name="phone" placeholder="phone number">
-        <input type="submit" value="Add Contact" name="add"/>
+        <button type="submit" value="Add Contact" name="add">Add Contact</button>
     </form>
 </body>
 </html>

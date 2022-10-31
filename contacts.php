@@ -5,7 +5,7 @@
     include 'backend/functions.php';
     
     $result = $conn->query('SELECT * FROM contact');
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -19,35 +19,19 @@
     <script src="frontend/js/contacts.js" defer></script>
 </head>
 <body>
-    <table>
-        <?php 
-            while($row = $result->fetch_assoc()){
-
-                echo '<tr class="contact" id="' . $row['id'] . '">';
-                echo "<td>" . $row['Name'] . "</td>";
-                echo "<td>" . $row['email'] . "</td>";
-                echo "<td>" . $row['phone'] . "</td>";
-                echo "<td>";
-                echo "<form action='email.php' method='post'>";
-                echo "<input type='hidden' name='to' value='" . $row['Name'] . "' />";
-                echo "<button type='submit' name='email' value='" . $row['email'] . "'>Email</button>";
-                echo "</form>";
-                echo "</td>";
-                echo "<td>";
-                echo "<form action='call.php' method='post'>";
-                echo "<input type='hidden' name='to' value='" . $row['phone'] . "' />";
-                echo "<button type='submit' name='call' value='" . $row['Name'] . "'>Call</button>";
-                echo "</form>";
-                echo "</td>";
-                echo "<td>";
-                echo "<form action='backend/delete.php' method='post'>";
-                echo "<button type='submit' name='id' value='" . $row['id'] ."'>Delete</button>";
-                echo "</form>";
-                echo "</td>";
-                echo '</tr>';
-            }
-        ?>
-        
-    </table>
+    <div class="wrapper">
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td>Email: </td>
+                <td>Phone Number: </td>
+            </tr>
+            <?php 
+                while($row = $result->fetch_assoc()){
+                    contactTable($row);
+                }
+            ?>
+        </table>
+    </div>
 </body>
 </html>

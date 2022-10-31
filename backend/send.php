@@ -1,6 +1,6 @@
 <?php 
 
-    $from = 'roger@claussydesigns.com';
+    $from = 'playground@claussydesigns.com';
 
     if(isset($_POST['submit'])){
         $to = $_POST['to'];
